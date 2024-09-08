@@ -12,11 +12,16 @@ include "top.php";
 
 <?php
 
+if(!isset($_FILES["uploaded"]["tmp_name"]))
+    exit();
+
 include "adif_parser.php";
+
 
 // $_FILES["uploaded"]["tmp_name"]
 
 echo "File: " . $_FILES["uploaded"]["tmp_name"];
+
 
 $p = new ADIF_Parser;
 $p->load_from_file($_FILES["uploaded"]["tmp_name"]);
@@ -31,8 +36,6 @@ while($record = $p->get_record())
         break;
     }
 
-   // Output the call sign
-   // Output the entire record
 
     echo "<br> My callsign " . $record["station_callsign"];
     echo " - " . $record["call"];
