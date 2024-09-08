@@ -1,6 +1,8 @@
 # WWBOTA-log-processing-tool
 
 The source codes are for inspiration and may contain errors. I am constantly working on improvements.
+Used on http://www.okbota.cz
+
 
 ### Files 
 adif_parser.php - Adif parser Jason Harris KJ4IWX <br>
